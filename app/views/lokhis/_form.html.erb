@@ -1,0 +1,25 @@
+<%= form_for(@lokhi) do |f| %>
+  <% if @lokhi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lokhi.errors.count, "error") %> prohibited this lokhi from being saved:</h2>
+
+      <ul>
+      <% @lokhi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

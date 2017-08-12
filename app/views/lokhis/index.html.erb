@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lokhis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lokhis.each do |lokhi| %>
+      <tr>
+        <td><%= lokhi.name %></td>
+        <td><%= lokhi.age %></td>
+        <td><%= link_to 'Show', lokhi %></td>
+        <td><%= link_to 'Edit', edit_lokhi_path(lokhi) %></td>
+        <td><%= link_to 'Destroy', lokhi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lokhi', new_lokhi_path %>

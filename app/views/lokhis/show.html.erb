@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lokhi.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @lokhi.age %>
+</p>
+
+<%= link_to 'Edit', edit_lokhi_path(@lokhi) %> |
+<%= link_to 'Back', lokhis_path %>
